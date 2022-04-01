@@ -1,20 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
+import Navigation from './app/navigation/Navigation';
+import {app} from "./util/firebase"
+//Export deafult es una funcion que va a ser exportada para importarla en otra clase
+//Export default -> Se importa sin llaves, si no tiene default, se usan llaves
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Navigation />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const styles = StyleSheet.create({});
